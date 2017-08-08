@@ -243,13 +243,10 @@ void *exports(char *module, char *name) {
         EXPORT("abortStackOverflow", _env__abortStackOverflow_);
         EXPORT("_emscripten_memcpy_big", _env__memcpy_big_);
 
-        EXPORT("___syscall4", _env__syscall_);
-        EXPORT("___syscall6", _env__syscall_);
         EXPORT("___syscall54", syscall54);
-        EXPORT("___syscall91", _env__syscall_);
-        EXPORT("___syscall140", _env__syscall_);
-        EXPORT("___syscall145", _env__syscall_);
         EXPORT("___syscall146", syscall146);
+        if(strncmp(name, "___syscall", 10) == 0) return &_env__syscall_;
+
         EXPORT("___lock", _env__lock_);
         EXPORT("___unlock", _env__lock_);
         EXPORT("___setErrNo", _env__setErrNo_);
@@ -267,9 +264,20 @@ void *exports(char *module, char *name) {
         if(strncmp(name, "invoke_d", 8) == 0) return &_env__invoke_d_any_;
 
         EXPORT("___assert_fail", _env__assert_fail_);
-        EXPORT("_strftime_l", _env__strftime_l_);
         EXPORT("_getenv", _env__getenv_);
         EXPORT("___map_file", _env____map_file_);
+        EXPORT("_strftime_l", _env__strftime_l_);
+        EXPORT("_strftime", _env__lazy_dummy_);
+        EXPORT("_difftime", _env__lazy_dummy_);
+        EXPORT("_system", _env__lazy_dummy_);
+        EXPORT("_longjmp", _env__lazy_dummy_);
+        EXPORT("_mktime", _env__lazy_dummy_);
+        EXPORT("_gmtime", _env__lazy_dummy_);
+        EXPORT("_clock", _env__lazy_dummy_);
+        EXPORT("_time", _env__lazy_dummy_);
+        EXPORT("_localtime", _env__lazy_dummy_);
+        EXPORT("_exit", _env__lazy_dummy_);
+        EXPORT("___clock_gettime", _env__lazy_dummy_);
 
         EXPORT("_pthread_cond_wait", _env___pthread_stuff_);
         EXPORT("_pthread_key_create", _env___pthread_stuff_);
@@ -321,6 +329,9 @@ void *exports(char *module, char *name) {
     if(strcmp("global", module) == 0) {
         EXPORT("NaN", _global__NaN_);
         EXPORT("Infinity", _global__Infinity_);
+    }
+    if(strcmp("global.Math", module) == 0) {
+        EXPORT("pow", _env__lazy_dummy_);
     }
     return NULL;
 }

@@ -537,6 +537,7 @@ void thunk_out(Module *m, uint32_t fidx) {
     case 0x800       : thunk_out_0_0      (m, func, type); break;
     case 0x8001      : thunk_out_0_i      (m, func, type); break;
     case 0x80011     : thunk_out_0_ii     (m, func, type); break;
+    case 0x800111    : thunk_out_0_ii     (m, func, type); break;
     case 0x8001111   : thunk_out_0_iiii   (m, func, type); break;
     case 0x810       : thunk_out_i_0      (m, func, type); break;
     case 0x8101      : thunk_out_i_i      (m, func, type); break;

@@ -46,7 +46,7 @@ thunk_in_0_c_template = """\
 void thunk_in_0_{achars}({param_list}) {{
   Module *m = _wa_current_module_;
   {args_setup};
-  interpret(m);
+  interpret(m, -1);
 }}
 
 """
@@ -55,7 +55,7 @@ thunk_in_X_c_template = """\
 {rtype} thunk_in_{rchar}_{achars}({param_list}) {{
   Module *m = _wa_current_module_;
   {args_setup};
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.{rfield};
 }}
 

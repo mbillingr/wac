@@ -645,7 +645,7 @@ void setup_call(Module *m, uint32_t fidx) {
     return;
 }
 
-bool interpret(Module *m) {
+bool interpret(Module *m, int n_steps) {
     uint8_t     *bytes = m->bytes;
     StackValue  *stack = m->stack;
 
@@ -662,7 +662,12 @@ bool interpret(Module *m) {
     double       j, k, l; // F64 math
     bool         overflow = false;
 
+    int          step = 0;
+
     while (m->pc < m->byte_count) {
+        if(n_steps > 0 && step++ > n_steps)
+            return true;
+
         opcode = bytes[m->pc];
         cur_pc = m->pc;
         m->pc += 1;
@@ -1472,7 +1477,7 @@ void run_init_expr(Module *m, uint8_t type, uint32_t *pc) {
     // WARNING: running code here to get initial value!
     info("  running init_expr at 0x%x: %s\n",
             m->pc, block_repr(&block));
-    interpret(m);
+    interpret(m, -1);
     *pc = m->pc;
 
     ASSERT(m->stack[m->sp].value_type == type,
@@ -1925,7 +1930,7 @@ Module *load_module(char *path, Options options) {
             result = true;
         } else {
             // run the function setup by setup_call
-            result = interpret(m);
+            result = interpret(m, -1);
         }
         if (!result) {
             FATAL("Exception: %s\n", exception);
@@ -1994,7 +1999,7 @@ bool invoke(Module *m, char *entry, int argc, char **argv) {
 
     setup_call(m, fidx);
 
-    result = interpret(m);
+    result = interpret(m, -1);
 
     if (TRACE && DEBUG) { dump_stacks(m); }
 

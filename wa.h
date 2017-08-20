@@ -164,4 +164,6 @@ bool interpret(Module *m);
 Module *load_module(char *path, Options opts, HostExportCallback host_export);
 bool invoke(Module *m, char *entry, int argc, char **argv);
 
+void free_module(Module *m);
+
 #endif // of WAC_H

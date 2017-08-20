@@ -1550,6 +1550,7 @@ Module *load_module(char *path, Options options, HostExportCallback host_export)
             } else {
                 error("Ignoring unknown custom section '%s'\n", name);
             }
+            free(name);
             pos = end_pos;
             break;
         case 1:
@@ -1668,6 +1669,8 @@ Module *load_module(char *path, Options options, HostExportCallback host_export)
                     func->func_ptr = val;
                     break;
                 case 0x01:  // Table
+                    free(import_module);
+                    free(import_field);
                     ASSERT(!m->table.entries,
                            "More than 1 table not supported\n");
                     //m->table.entries = val;
@@ -1675,12 +1678,16 @@ Module *load_module(char *path, Options options, HostExportCallback host_export)
                     m->table.entries = *(uint32_t **)val;
                     break;
                 case 0x02:  // Memory
+                    free(import_module);
+                    free(import_field);
                     ASSERT(!m->memory.bytes,
                            "More than 1 memory not supported\n");
                     warn("  setting memory.bytes to: %p\n", *(uint8_t **)val);
                     m->memory.bytes = *(uint8_t **)val;
                     break;
                 case 0x03:  // Global
+                    free(import_module);
+                    free(import_field);
                     m->global_count += 1;
                     m->globals = arecalloc(m->globals,
                                            m->global_count-1, m->global_count,
@@ -1704,7 +1711,7 @@ Module *load_module(char *path, Options options, HostExportCallback host_export)
             }
             break;
         case 3:
-            warn("Parsing Function(3) section (length: 0x%x)\n", slen);
+            warn("Parsing Function(3) section (length: 0x%x)\n", slen);            
             m->function_count += read_LEB(bytes, &pos, 32);
             debug("  import_count: %d, new count: %d\n",
                   m->import_count, m->function_count);
@@ -1715,6 +1722,7 @@ Module *load_module(char *path, Options options, HostExportCallback host_export)
             if (m->import_count != 0) {
                 memcpy(functions, m->functions, sizeof(Block)*m->import_count);
             }
+            free(m->functions);  // free ignores null pointers, right?
             m->functions = functions;
 
             for (uint32_t f=m->import_count; f<m->function_count; f++) {
@@ -1785,6 +1793,7 @@ Module *load_module(char *path, Options options, HostExportCallback host_export)
                     warn("  ignoring non-function export '%s'"
                          " kind 0x%x index 0x%x\n",
                          name, kind, index);
+                    free(name);
                     continue;
                 }
                 m->functions[index].export_name = name;
@@ -2007,3 +2016,28 @@ bool invoke(Module *m, char *entry, int argc, char **argv) {
 
     return result;
 }
+
+void free_module(Module *m) {
+    for(size_t i=0; i<m->type_count; i++) {
+        free(m->types[i].params);
+        free(m->types[i].results);
+    }
+    free(m->types);
+
+    for(size_t i=0; i<m->function_count; i++) {
+        free(m->functions[i].export_name);
+        free(m->functions[i].locals);
+        free(m->functions[i].import_module);
+        free(m->functions[i].import_field);
+    }
+    free(m->functions);
+
+    for(size_t i=0; i<m->byte_count; i++) {
+        free(m->block_lookup[i]);
+    }
+    free(m->block_lookup);
+
+    free(m->globals);
+    free(m);
+}
+

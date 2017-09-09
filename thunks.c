@@ -2845,20 +2845,20 @@ void thunk_out_0_FFFFFF(Module *m, Block *function, Type *type) {
 void thunk_in_0_0() {
   Module *m = _wa_current_module_;
   ;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_i(uint32_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_ii(uint32_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iii(uint32_t a0, uint32_t a1, uint32_t a2) {
@@ -2866,7 +2866,7 @@ void thunk_in_0_iii(uint32_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iiI(uint32_t a0, uint32_t a1, uint64_t a2) {
@@ -2874,7 +2874,7 @@ void thunk_in_0_iiI(uint32_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iif(uint32_t a0, uint32_t a1, float a2) {
@@ -2882,7 +2882,7 @@ void thunk_in_0_iif(uint32_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iiF(uint32_t a0, uint32_t a1, double a2) {
@@ -2890,14 +2890,14 @@ void thunk_in_0_iiF(uint32_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iI(uint32_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iIi(uint32_t a0, uint64_t a1, uint32_t a2) {
@@ -2905,7 +2905,7 @@ void thunk_in_0_iIi(uint32_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iII(uint32_t a0, uint64_t a1, uint64_t a2) {
@@ -2913,7 +2913,7 @@ void thunk_in_0_iII(uint32_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iIf(uint32_t a0, uint64_t a1, float a2) {
@@ -2921,7 +2921,7 @@ void thunk_in_0_iIf(uint32_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iIF(uint32_t a0, uint64_t a1, double a2) {
@@ -2929,14 +2929,14 @@ void thunk_in_0_iIF(uint32_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_if(uint32_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_ifi(uint32_t a0, float a1, uint32_t a2) {
@@ -2944,7 +2944,7 @@ void thunk_in_0_ifi(uint32_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_ifI(uint32_t a0, float a1, uint64_t a2) {
@@ -2952,7 +2952,7 @@ void thunk_in_0_ifI(uint32_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iff(uint32_t a0, float a1, float a2) {
@@ -2960,7 +2960,7 @@ void thunk_in_0_iff(uint32_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_ifF(uint32_t a0, float a1, double a2) {
@@ -2968,14 +2968,14 @@ void thunk_in_0_ifF(uint32_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iF(uint32_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iFi(uint32_t a0, double a1, uint32_t a2) {
@@ -2983,7 +2983,7 @@ void thunk_in_0_iFi(uint32_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iFI(uint32_t a0, double a1, uint64_t a2) {
@@ -2991,7 +2991,7 @@ void thunk_in_0_iFI(uint32_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iFf(uint32_t a0, double a1, float a2) {
@@ -2999,7 +2999,7 @@ void thunk_in_0_iFf(uint32_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_iFF(uint32_t a0, double a1, double a2) {
@@ -3007,20 +3007,20 @@ void thunk_in_0_iFF(uint32_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_I(uint64_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Ii(uint64_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Iii(uint64_t a0, uint32_t a1, uint32_t a2) {
@@ -3028,7 +3028,7 @@ void thunk_in_0_Iii(uint64_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IiI(uint64_t a0, uint32_t a1, uint64_t a2) {
@@ -3036,7 +3036,7 @@ void thunk_in_0_IiI(uint64_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Iif(uint64_t a0, uint32_t a1, float a2) {
@@ -3044,7 +3044,7 @@ void thunk_in_0_Iif(uint64_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IiF(uint64_t a0, uint32_t a1, double a2) {
@@ -3052,14 +3052,14 @@ void thunk_in_0_IiF(uint64_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_II(uint64_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IIi(uint64_t a0, uint64_t a1, uint32_t a2) {
@@ -3067,7 +3067,7 @@ void thunk_in_0_IIi(uint64_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_III(uint64_t a0, uint64_t a1, uint64_t a2) {
@@ -3075,7 +3075,7 @@ void thunk_in_0_III(uint64_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IIf(uint64_t a0, uint64_t a1, float a2) {
@@ -3083,7 +3083,7 @@ void thunk_in_0_IIf(uint64_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IIF(uint64_t a0, uint64_t a1, double a2) {
@@ -3091,14 +3091,14 @@ void thunk_in_0_IIF(uint64_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_If(uint64_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Ifi(uint64_t a0, float a1, uint32_t a2) {
@@ -3106,7 +3106,7 @@ void thunk_in_0_Ifi(uint64_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IfI(uint64_t a0, float a1, uint64_t a2) {
@@ -3114,7 +3114,7 @@ void thunk_in_0_IfI(uint64_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Iff(uint64_t a0, float a1, float a2) {
@@ -3122,7 +3122,7 @@ void thunk_in_0_Iff(uint64_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IfF(uint64_t a0, float a1, double a2) {
@@ -3130,14 +3130,14 @@ void thunk_in_0_IfF(uint64_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IF(uint64_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IFi(uint64_t a0, double a1, uint32_t a2) {
@@ -3145,7 +3145,7 @@ void thunk_in_0_IFi(uint64_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IFI(uint64_t a0, double a1, uint64_t a2) {
@@ -3153,7 +3153,7 @@ void thunk_in_0_IFI(uint64_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IFf(uint64_t a0, double a1, float a2) {
@@ -3161,7 +3161,7 @@ void thunk_in_0_IFf(uint64_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_IFF(uint64_t a0, double a1, double a2) {
@@ -3169,20 +3169,20 @@ void thunk_in_0_IFF(uint64_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_f(float a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fi(float a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fii(float a0, uint32_t a1, uint32_t a2) {
@@ -3190,7 +3190,7 @@ void thunk_in_0_fii(float a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fiI(float a0, uint32_t a1, uint64_t a2) {
@@ -3198,7 +3198,7 @@ void thunk_in_0_fiI(float a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fif(float a0, uint32_t a1, float a2) {
@@ -3206,7 +3206,7 @@ void thunk_in_0_fif(float a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fiF(float a0, uint32_t a1, double a2) {
@@ -3214,14 +3214,14 @@ void thunk_in_0_fiF(float a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fI(float a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fIi(float a0, uint64_t a1, uint32_t a2) {
@@ -3229,7 +3229,7 @@ void thunk_in_0_fIi(float a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fII(float a0, uint64_t a1, uint64_t a2) {
@@ -3237,7 +3237,7 @@ void thunk_in_0_fII(float a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fIf(float a0, uint64_t a1, float a2) {
@@ -3245,7 +3245,7 @@ void thunk_in_0_fIf(float a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fIF(float a0, uint64_t a1, double a2) {
@@ -3253,14 +3253,14 @@ void thunk_in_0_fIF(float a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_ff(float a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_ffi(float a0, float a1, uint32_t a2) {
@@ -3268,7 +3268,7 @@ void thunk_in_0_ffi(float a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_ffI(float a0, float a1, uint64_t a2) {
@@ -3276,7 +3276,7 @@ void thunk_in_0_ffI(float a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fff(float a0, float a1, float a2) {
@@ -3284,7 +3284,7 @@ void thunk_in_0_fff(float a0, float a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_ffF(float a0, float a1, double a2) {
@@ -3292,14 +3292,14 @@ void thunk_in_0_ffF(float a0, float a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fF(float a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fFi(float a0, double a1, uint32_t a2) {
@@ -3307,7 +3307,7 @@ void thunk_in_0_fFi(float a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fFI(float a0, double a1, uint64_t a2) {
@@ -3315,7 +3315,7 @@ void thunk_in_0_fFI(float a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fFf(float a0, double a1, float a2) {
@@ -3323,7 +3323,7 @@ void thunk_in_0_fFf(float a0, double a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_fFF(float a0, double a1, double a2) {
@@ -3331,20 +3331,20 @@ void thunk_in_0_fFF(float a0, double a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_F(double a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Fi(double a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Fii(double a0, uint32_t a1, uint32_t a2) {
@@ -3352,7 +3352,7 @@ void thunk_in_0_Fii(double a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FiI(double a0, uint32_t a1, uint64_t a2) {
@@ -3360,7 +3360,7 @@ void thunk_in_0_FiI(double a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Fif(double a0, uint32_t a1, float a2) {
@@ -3368,7 +3368,7 @@ void thunk_in_0_Fif(double a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FiF(double a0, uint32_t a1, double a2) {
@@ -3376,14 +3376,14 @@ void thunk_in_0_FiF(double a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FI(double a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FIi(double a0, uint64_t a1, uint32_t a2) {
@@ -3391,7 +3391,7 @@ void thunk_in_0_FIi(double a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FII(double a0, uint64_t a1, uint64_t a2) {
@@ -3399,7 +3399,7 @@ void thunk_in_0_FII(double a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FIf(double a0, uint64_t a1, float a2) {
@@ -3407,7 +3407,7 @@ void thunk_in_0_FIf(double a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FIF(double a0, uint64_t a1, double a2) {
@@ -3415,14 +3415,14 @@ void thunk_in_0_FIF(double a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Ff(double a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Ffi(double a0, float a1, uint32_t a2) {
@@ -3430,7 +3430,7 @@ void thunk_in_0_Ffi(double a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FfI(double a0, float a1, uint64_t a2) {
@@ -3438,7 +3438,7 @@ void thunk_in_0_FfI(double a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_Fff(double a0, float a1, float a2) {
@@ -3446,7 +3446,7 @@ void thunk_in_0_Fff(double a0, float a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FfF(double a0, float a1, double a2) {
@@ -3454,14 +3454,14 @@ void thunk_in_0_FfF(double a0, float a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FF(double a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FFi(double a0, double a1, uint32_t a2) {
@@ -3469,7 +3469,7 @@ void thunk_in_0_FFi(double a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FFI(double a0, double a1, uint64_t a2) {
@@ -3477,7 +3477,7 @@ void thunk_in_0_FFI(double a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FFf(double a0, double a1, float a2) {
@@ -3485,7 +3485,7 @@ void thunk_in_0_FFf(double a0, double a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 void thunk_in_0_FFF(double a0, double a1, double a2) {
@@ -3493,20 +3493,20 @@ void thunk_in_0_FFF(double a0, double a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
 }
 
 uint32_t thunk_in_i_0() {
   Module *m = _wa_current_module_;
   ;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
 uint32_t thunk_in_i_i(uint32_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3514,7 +3514,7 @@ uint32_t thunk_in_i_ii(uint32_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3523,7 +3523,7 @@ uint32_t thunk_in_i_iii(uint32_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3532,7 +3532,7 @@ uint32_t thunk_in_i_iiI(uint32_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3541,7 +3541,7 @@ uint32_t thunk_in_i_iif(uint32_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3550,7 +3550,7 @@ uint32_t thunk_in_i_iiF(uint32_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3558,7 +3558,7 @@ uint32_t thunk_in_i_iI(uint32_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3567,7 +3567,7 @@ uint32_t thunk_in_i_iIi(uint32_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3576,7 +3576,7 @@ uint32_t thunk_in_i_iII(uint32_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3585,7 +3585,7 @@ uint32_t thunk_in_i_iIf(uint32_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3594,7 +3594,7 @@ uint32_t thunk_in_i_iIF(uint32_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3602,7 +3602,7 @@ uint32_t thunk_in_i_if(uint32_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3611,7 +3611,7 @@ uint32_t thunk_in_i_ifi(uint32_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3620,7 +3620,7 @@ uint32_t thunk_in_i_ifI(uint32_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3629,7 +3629,7 @@ uint32_t thunk_in_i_iff(uint32_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3638,7 +3638,7 @@ uint32_t thunk_in_i_ifF(uint32_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3646,7 +3646,7 @@ uint32_t thunk_in_i_iF(uint32_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3655,7 +3655,7 @@ uint32_t thunk_in_i_iFi(uint32_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3664,7 +3664,7 @@ uint32_t thunk_in_i_iFI(uint32_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3673,7 +3673,7 @@ uint32_t thunk_in_i_iFf(uint32_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3682,14 +3682,14 @@ uint32_t thunk_in_i_iFF(uint32_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
 uint32_t thunk_in_i_I(uint64_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3697,7 +3697,7 @@ uint32_t thunk_in_i_Ii(uint64_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3706,7 +3706,7 @@ uint32_t thunk_in_i_Iii(uint64_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3715,7 +3715,7 @@ uint32_t thunk_in_i_IiI(uint64_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3724,7 +3724,7 @@ uint32_t thunk_in_i_Iif(uint64_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3733,7 +3733,7 @@ uint32_t thunk_in_i_IiF(uint64_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3741,7 +3741,7 @@ uint32_t thunk_in_i_II(uint64_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3750,7 +3750,7 @@ uint32_t thunk_in_i_IIi(uint64_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3759,7 +3759,7 @@ uint32_t thunk_in_i_III(uint64_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3768,7 +3768,7 @@ uint32_t thunk_in_i_IIf(uint64_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3777,7 +3777,7 @@ uint32_t thunk_in_i_IIF(uint64_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3785,7 +3785,7 @@ uint32_t thunk_in_i_If(uint64_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3794,7 +3794,7 @@ uint32_t thunk_in_i_Ifi(uint64_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3803,7 +3803,7 @@ uint32_t thunk_in_i_IfI(uint64_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3812,7 +3812,7 @@ uint32_t thunk_in_i_Iff(uint64_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3821,7 +3821,7 @@ uint32_t thunk_in_i_IfF(uint64_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3829,7 +3829,7 @@ uint32_t thunk_in_i_IF(uint64_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3838,7 +3838,7 @@ uint32_t thunk_in_i_IFi(uint64_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3847,7 +3847,7 @@ uint32_t thunk_in_i_IFI(uint64_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3856,7 +3856,7 @@ uint32_t thunk_in_i_IFf(uint64_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3865,14 +3865,14 @@ uint32_t thunk_in_i_IFF(uint64_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
 uint32_t thunk_in_i_f(float a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3880,7 +3880,7 @@ uint32_t thunk_in_i_fi(float a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3889,7 +3889,7 @@ uint32_t thunk_in_i_fii(float a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3898,7 +3898,7 @@ uint32_t thunk_in_i_fiI(float a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3907,7 +3907,7 @@ uint32_t thunk_in_i_fif(float a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3916,7 +3916,7 @@ uint32_t thunk_in_i_fiF(float a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3924,7 +3924,7 @@ uint32_t thunk_in_i_fI(float a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3933,7 +3933,7 @@ uint32_t thunk_in_i_fIi(float a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3942,7 +3942,7 @@ uint32_t thunk_in_i_fII(float a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3951,7 +3951,7 @@ uint32_t thunk_in_i_fIf(float a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3960,7 +3960,7 @@ uint32_t thunk_in_i_fIF(float a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3968,7 +3968,7 @@ uint32_t thunk_in_i_ff(float a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3977,7 +3977,7 @@ uint32_t thunk_in_i_ffi(float a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3986,7 +3986,7 @@ uint32_t thunk_in_i_ffI(float a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -3995,7 +3995,7 @@ uint32_t thunk_in_i_fff(float a0, float a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4004,7 +4004,7 @@ uint32_t thunk_in_i_ffF(float a0, float a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4012,7 +4012,7 @@ uint32_t thunk_in_i_fF(float a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4021,7 +4021,7 @@ uint32_t thunk_in_i_fFi(float a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4030,7 +4030,7 @@ uint32_t thunk_in_i_fFI(float a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4039,7 +4039,7 @@ uint32_t thunk_in_i_fFf(float a0, double a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4048,14 +4048,14 @@ uint32_t thunk_in_i_fFF(float a0, double a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
 uint32_t thunk_in_i_F(double a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4063,7 +4063,7 @@ uint32_t thunk_in_i_Fi(double a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4072,7 +4072,7 @@ uint32_t thunk_in_i_Fii(double a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4081,7 +4081,7 @@ uint32_t thunk_in_i_FiI(double a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4090,7 +4090,7 @@ uint32_t thunk_in_i_Fif(double a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4099,7 +4099,7 @@ uint32_t thunk_in_i_FiF(double a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4107,7 +4107,7 @@ uint32_t thunk_in_i_FI(double a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4116,7 +4116,7 @@ uint32_t thunk_in_i_FIi(double a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4125,7 +4125,7 @@ uint32_t thunk_in_i_FII(double a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4134,7 +4134,7 @@ uint32_t thunk_in_i_FIf(double a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4143,7 +4143,7 @@ uint32_t thunk_in_i_FIF(double a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4151,7 +4151,7 @@ uint32_t thunk_in_i_Ff(double a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4160,7 +4160,7 @@ uint32_t thunk_in_i_Ffi(double a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4169,7 +4169,7 @@ uint32_t thunk_in_i_FfI(double a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4178,7 +4178,7 @@ uint32_t thunk_in_i_Fff(double a0, float a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4187,7 +4187,7 @@ uint32_t thunk_in_i_FfF(double a0, float a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4195,7 +4195,7 @@ uint32_t thunk_in_i_FF(double a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4204,7 +4204,7 @@ uint32_t thunk_in_i_FFi(double a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4213,7 +4213,7 @@ uint32_t thunk_in_i_FFI(double a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4222,7 +4222,7 @@ uint32_t thunk_in_i_FFf(double a0, double a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
@@ -4231,21 +4231,21 @@ uint32_t thunk_in_i_FFF(double a0, double a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint32;
 }
 
 uint64_t thunk_in_I_0() {
   Module *m = _wa_current_module_;
   ;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
 uint64_t thunk_in_I_i(uint32_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4253,7 +4253,7 @@ uint64_t thunk_in_I_ii(uint32_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4262,7 +4262,7 @@ uint64_t thunk_in_I_iii(uint32_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4271,7 +4271,7 @@ uint64_t thunk_in_I_iiI(uint32_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4280,7 +4280,7 @@ uint64_t thunk_in_I_iif(uint32_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4289,7 +4289,7 @@ uint64_t thunk_in_I_iiF(uint32_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4297,7 +4297,7 @@ uint64_t thunk_in_I_iI(uint32_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4306,7 +4306,7 @@ uint64_t thunk_in_I_iIi(uint32_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4315,7 +4315,7 @@ uint64_t thunk_in_I_iII(uint32_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4324,7 +4324,7 @@ uint64_t thunk_in_I_iIf(uint32_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4333,7 +4333,7 @@ uint64_t thunk_in_I_iIF(uint32_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4341,7 +4341,7 @@ uint64_t thunk_in_I_if(uint32_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4350,7 +4350,7 @@ uint64_t thunk_in_I_ifi(uint32_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4359,7 +4359,7 @@ uint64_t thunk_in_I_ifI(uint32_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4368,7 +4368,7 @@ uint64_t thunk_in_I_iff(uint32_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4377,7 +4377,7 @@ uint64_t thunk_in_I_ifF(uint32_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4385,7 +4385,7 @@ uint64_t thunk_in_I_iF(uint32_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4394,7 +4394,7 @@ uint64_t thunk_in_I_iFi(uint32_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4403,7 +4403,7 @@ uint64_t thunk_in_I_iFI(uint32_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4412,7 +4412,7 @@ uint64_t thunk_in_I_iFf(uint32_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4421,14 +4421,14 @@ uint64_t thunk_in_I_iFF(uint32_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
 uint64_t thunk_in_I_I(uint64_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4436,7 +4436,7 @@ uint64_t thunk_in_I_Ii(uint64_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4445,7 +4445,7 @@ uint64_t thunk_in_I_Iii(uint64_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4454,7 +4454,7 @@ uint64_t thunk_in_I_IiI(uint64_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4463,7 +4463,7 @@ uint64_t thunk_in_I_Iif(uint64_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4472,7 +4472,7 @@ uint64_t thunk_in_I_IiF(uint64_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4480,7 +4480,7 @@ uint64_t thunk_in_I_II(uint64_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4489,7 +4489,7 @@ uint64_t thunk_in_I_IIi(uint64_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4498,7 +4498,7 @@ uint64_t thunk_in_I_III(uint64_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4507,7 +4507,7 @@ uint64_t thunk_in_I_IIf(uint64_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4516,7 +4516,7 @@ uint64_t thunk_in_I_IIF(uint64_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4524,7 +4524,7 @@ uint64_t thunk_in_I_If(uint64_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4533,7 +4533,7 @@ uint64_t thunk_in_I_Ifi(uint64_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4542,7 +4542,7 @@ uint64_t thunk_in_I_IfI(uint64_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4551,7 +4551,7 @@ uint64_t thunk_in_I_Iff(uint64_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4560,7 +4560,7 @@ uint64_t thunk_in_I_IfF(uint64_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4568,7 +4568,7 @@ uint64_t thunk_in_I_IF(uint64_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4577,7 +4577,7 @@ uint64_t thunk_in_I_IFi(uint64_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4586,7 +4586,7 @@ uint64_t thunk_in_I_IFI(uint64_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4595,7 +4595,7 @@ uint64_t thunk_in_I_IFf(uint64_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4604,14 +4604,14 @@ uint64_t thunk_in_I_IFF(uint64_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
 uint64_t thunk_in_I_f(float a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4619,7 +4619,7 @@ uint64_t thunk_in_I_fi(float a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4628,7 +4628,7 @@ uint64_t thunk_in_I_fii(float a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4637,7 +4637,7 @@ uint64_t thunk_in_I_fiI(float a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4646,7 +4646,7 @@ uint64_t thunk_in_I_fif(float a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4655,7 +4655,7 @@ uint64_t thunk_in_I_fiF(float a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4663,7 +4663,7 @@ uint64_t thunk_in_I_fI(float a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4672,7 +4672,7 @@ uint64_t thunk_in_I_fIi(float a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4681,7 +4681,7 @@ uint64_t thunk_in_I_fII(float a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4690,7 +4690,7 @@ uint64_t thunk_in_I_fIf(float a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4699,7 +4699,7 @@ uint64_t thunk_in_I_fIF(float a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4707,7 +4707,7 @@ uint64_t thunk_in_I_ff(float a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4716,7 +4716,7 @@ uint64_t thunk_in_I_ffi(float a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4725,7 +4725,7 @@ uint64_t thunk_in_I_ffI(float a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4734,7 +4734,7 @@ uint64_t thunk_in_I_fff(float a0, float a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4743,7 +4743,7 @@ uint64_t thunk_in_I_ffF(float a0, float a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4751,7 +4751,7 @@ uint64_t thunk_in_I_fF(float a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4760,7 +4760,7 @@ uint64_t thunk_in_I_fFi(float a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4769,7 +4769,7 @@ uint64_t thunk_in_I_fFI(float a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4778,7 +4778,7 @@ uint64_t thunk_in_I_fFf(float a0, double a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4787,14 +4787,14 @@ uint64_t thunk_in_I_fFF(float a0, double a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
 uint64_t thunk_in_I_F(double a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4802,7 +4802,7 @@ uint64_t thunk_in_I_Fi(double a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4811,7 +4811,7 @@ uint64_t thunk_in_I_Fii(double a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4820,7 +4820,7 @@ uint64_t thunk_in_I_FiI(double a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4829,7 +4829,7 @@ uint64_t thunk_in_I_Fif(double a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4838,7 +4838,7 @@ uint64_t thunk_in_I_FiF(double a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4846,7 +4846,7 @@ uint64_t thunk_in_I_FI(double a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4855,7 +4855,7 @@ uint64_t thunk_in_I_FIi(double a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4864,7 +4864,7 @@ uint64_t thunk_in_I_FII(double a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4873,7 +4873,7 @@ uint64_t thunk_in_I_FIf(double a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4882,7 +4882,7 @@ uint64_t thunk_in_I_FIF(double a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4890,7 +4890,7 @@ uint64_t thunk_in_I_Ff(double a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4899,7 +4899,7 @@ uint64_t thunk_in_I_Ffi(double a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4908,7 +4908,7 @@ uint64_t thunk_in_I_FfI(double a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4917,7 +4917,7 @@ uint64_t thunk_in_I_Fff(double a0, float a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4926,7 +4926,7 @@ uint64_t thunk_in_I_FfF(double a0, float a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4934,7 +4934,7 @@ uint64_t thunk_in_I_FF(double a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4943,7 +4943,7 @@ uint64_t thunk_in_I_FFi(double a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4952,7 +4952,7 @@ uint64_t thunk_in_I_FFI(double a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4961,7 +4961,7 @@ uint64_t thunk_in_I_FFf(double a0, double a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
@@ -4970,21 +4970,21 @@ uint64_t thunk_in_I_FFF(double a0, double a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.uint64;
 }
 
 float thunk_in_f_0() {
   Module *m = _wa_current_module_;
   ;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
 float thunk_in_f_i(uint32_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -4992,7 +4992,7 @@ float thunk_in_f_ii(uint32_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5001,7 +5001,7 @@ float thunk_in_f_iii(uint32_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5010,7 +5010,7 @@ float thunk_in_f_iiI(uint32_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5019,7 +5019,7 @@ float thunk_in_f_iif(uint32_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5028,7 +5028,7 @@ float thunk_in_f_iiF(uint32_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5036,7 +5036,7 @@ float thunk_in_f_iI(uint32_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5045,7 +5045,7 @@ float thunk_in_f_iIi(uint32_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5054,7 +5054,7 @@ float thunk_in_f_iII(uint32_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5063,7 +5063,7 @@ float thunk_in_f_iIf(uint32_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5072,7 +5072,7 @@ float thunk_in_f_iIF(uint32_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5080,7 +5080,7 @@ float thunk_in_f_if(uint32_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5089,7 +5089,7 @@ float thunk_in_f_ifi(uint32_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5098,7 +5098,7 @@ float thunk_in_f_ifI(uint32_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5107,7 +5107,7 @@ float thunk_in_f_iff(uint32_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5116,7 +5116,7 @@ float thunk_in_f_ifF(uint32_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5124,7 +5124,7 @@ float thunk_in_f_iF(uint32_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5133,7 +5133,7 @@ float thunk_in_f_iFi(uint32_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5142,7 +5142,7 @@ float thunk_in_f_iFI(uint32_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5151,7 +5151,7 @@ float thunk_in_f_iFf(uint32_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5160,14 +5160,14 @@ float thunk_in_f_iFF(uint32_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
 float thunk_in_f_I(uint64_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5175,7 +5175,7 @@ float thunk_in_f_Ii(uint64_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5184,7 +5184,7 @@ float thunk_in_f_Iii(uint64_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5193,7 +5193,7 @@ float thunk_in_f_IiI(uint64_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5202,7 +5202,7 @@ float thunk_in_f_Iif(uint64_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5211,7 +5211,7 @@ float thunk_in_f_IiF(uint64_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5219,7 +5219,7 @@ float thunk_in_f_II(uint64_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5228,7 +5228,7 @@ float thunk_in_f_IIi(uint64_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5237,7 +5237,7 @@ float thunk_in_f_III(uint64_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5246,7 +5246,7 @@ float thunk_in_f_IIf(uint64_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5255,7 +5255,7 @@ float thunk_in_f_IIF(uint64_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5263,7 +5263,7 @@ float thunk_in_f_If(uint64_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5272,7 +5272,7 @@ float thunk_in_f_Ifi(uint64_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5281,7 +5281,7 @@ float thunk_in_f_IfI(uint64_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5290,7 +5290,7 @@ float thunk_in_f_Iff(uint64_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5299,7 +5299,7 @@ float thunk_in_f_IfF(uint64_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5307,7 +5307,7 @@ float thunk_in_f_IF(uint64_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5316,7 +5316,7 @@ float thunk_in_f_IFi(uint64_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5325,7 +5325,7 @@ float thunk_in_f_IFI(uint64_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5334,7 +5334,7 @@ float thunk_in_f_IFf(uint64_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5343,14 +5343,14 @@ float thunk_in_f_IFF(uint64_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
 float thunk_in_f_f(float a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5358,7 +5358,7 @@ float thunk_in_f_fi(float a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5367,7 +5367,7 @@ float thunk_in_f_fii(float a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5376,7 +5376,7 @@ float thunk_in_f_fiI(float a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5385,7 +5385,7 @@ float thunk_in_f_fif(float a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5394,7 +5394,7 @@ float thunk_in_f_fiF(float a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5402,7 +5402,7 @@ float thunk_in_f_fI(float a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5411,7 +5411,7 @@ float thunk_in_f_fIi(float a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5420,7 +5420,7 @@ float thunk_in_f_fII(float a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5429,7 +5429,7 @@ float thunk_in_f_fIf(float a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5438,7 +5438,7 @@ float thunk_in_f_fIF(float a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5446,7 +5446,7 @@ float thunk_in_f_ff(float a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5455,7 +5455,7 @@ float thunk_in_f_ffi(float a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5464,7 +5464,7 @@ float thunk_in_f_ffI(float a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5473,7 +5473,7 @@ float thunk_in_f_fff(float a0, float a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5482,7 +5482,7 @@ float thunk_in_f_ffF(float a0, float a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5490,7 +5490,7 @@ float thunk_in_f_fF(float a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5499,7 +5499,7 @@ float thunk_in_f_fFi(float a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5508,7 +5508,7 @@ float thunk_in_f_fFI(float a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5517,7 +5517,7 @@ float thunk_in_f_fFf(float a0, double a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5526,14 +5526,14 @@ float thunk_in_f_fFF(float a0, double a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
 float thunk_in_f_F(double a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5541,7 +5541,7 @@ float thunk_in_f_Fi(double a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5550,7 +5550,7 @@ float thunk_in_f_Fii(double a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5559,7 +5559,7 @@ float thunk_in_f_FiI(double a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5568,7 +5568,7 @@ float thunk_in_f_Fif(double a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5577,7 +5577,7 @@ float thunk_in_f_FiF(double a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5585,7 +5585,7 @@ float thunk_in_f_FI(double a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5594,7 +5594,7 @@ float thunk_in_f_FIi(double a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5603,7 +5603,7 @@ float thunk_in_f_FII(double a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5612,7 +5612,7 @@ float thunk_in_f_FIf(double a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5621,7 +5621,7 @@ float thunk_in_f_FIF(double a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5629,7 +5629,7 @@ float thunk_in_f_Ff(double a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5638,7 +5638,7 @@ float thunk_in_f_Ffi(double a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5647,7 +5647,7 @@ float thunk_in_f_FfI(double a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5656,7 +5656,7 @@ float thunk_in_f_Fff(double a0, float a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5665,7 +5665,7 @@ float thunk_in_f_FfF(double a0, float a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5673,7 +5673,7 @@ float thunk_in_f_FF(double a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5682,7 +5682,7 @@ float thunk_in_f_FFi(double a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5691,7 +5691,7 @@ float thunk_in_f_FFI(double a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5700,7 +5700,7 @@ float thunk_in_f_FFf(double a0, double a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
@@ -5709,21 +5709,21 @@ float thunk_in_f_FFF(double a0, double a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f32;
 }
 
 double thunk_in_F_0() {
   Module *m = _wa_current_module_;
   ;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
 double thunk_in_F_i(uint32_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5731,7 +5731,7 @@ double thunk_in_F_ii(uint32_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5740,7 +5740,7 @@ double thunk_in_F_iii(uint32_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5749,7 +5749,7 @@ double thunk_in_F_iiI(uint32_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5758,7 +5758,7 @@ double thunk_in_F_iif(uint32_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5767,7 +5767,7 @@ double thunk_in_F_iiF(uint32_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5775,7 +5775,7 @@ double thunk_in_F_iI(uint32_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5784,7 +5784,7 @@ double thunk_in_F_iIi(uint32_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5793,7 +5793,7 @@ double thunk_in_F_iII(uint32_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5802,7 +5802,7 @@ double thunk_in_F_iIf(uint32_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5811,7 +5811,7 @@ double thunk_in_F_iIF(uint32_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5819,7 +5819,7 @@ double thunk_in_F_if(uint32_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5828,7 +5828,7 @@ double thunk_in_F_ifi(uint32_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5837,7 +5837,7 @@ double thunk_in_F_ifI(uint32_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5846,7 +5846,7 @@ double thunk_in_F_iff(uint32_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5855,7 +5855,7 @@ double thunk_in_F_ifF(uint32_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5863,7 +5863,7 @@ double thunk_in_F_iF(uint32_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5872,7 +5872,7 @@ double thunk_in_F_iFi(uint32_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5881,7 +5881,7 @@ double thunk_in_F_iFI(uint32_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5890,7 +5890,7 @@ double thunk_in_F_iFf(uint32_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5899,14 +5899,14 @@ double thunk_in_F_iFF(uint32_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
 double thunk_in_F_I(uint64_t a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5914,7 +5914,7 @@ double thunk_in_F_Ii(uint64_t a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5923,7 +5923,7 @@ double thunk_in_F_Iii(uint64_t a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5932,7 +5932,7 @@ double thunk_in_F_IiI(uint64_t a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5941,7 +5941,7 @@ double thunk_in_F_Iif(uint64_t a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5950,7 +5950,7 @@ double thunk_in_F_IiF(uint64_t a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5958,7 +5958,7 @@ double thunk_in_F_II(uint64_t a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5967,7 +5967,7 @@ double thunk_in_F_IIi(uint64_t a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5976,7 +5976,7 @@ double thunk_in_F_III(uint64_t a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5985,7 +5985,7 @@ double thunk_in_F_IIf(uint64_t a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -5994,7 +5994,7 @@ double thunk_in_F_IIF(uint64_t a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6002,7 +6002,7 @@ double thunk_in_F_If(uint64_t a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6011,7 +6011,7 @@ double thunk_in_F_Ifi(uint64_t a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6020,7 +6020,7 @@ double thunk_in_F_IfI(uint64_t a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6029,7 +6029,7 @@ double thunk_in_F_Iff(uint64_t a0, float a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6038,7 +6038,7 @@ double thunk_in_F_IfF(uint64_t a0, float a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6046,7 +6046,7 @@ double thunk_in_F_IF(uint64_t a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6055,7 +6055,7 @@ double thunk_in_F_IFi(uint64_t a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6064,7 +6064,7 @@ double thunk_in_F_IFI(uint64_t a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6073,7 +6073,7 @@ double thunk_in_F_IFf(uint64_t a0, double a1, float a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6082,14 +6082,14 @@ double thunk_in_F_IFF(uint64_t a0, double a1, double a2) {
   m->stack[m->fp+0].value.uint64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
 double thunk_in_F_f(float a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6097,7 +6097,7 @@ double thunk_in_F_fi(float a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6106,7 +6106,7 @@ double thunk_in_F_fii(float a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6115,7 +6115,7 @@ double thunk_in_F_fiI(float a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6124,7 +6124,7 @@ double thunk_in_F_fif(float a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6133,7 +6133,7 @@ double thunk_in_F_fiF(float a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6141,7 +6141,7 @@ double thunk_in_F_fI(float a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6150,7 +6150,7 @@ double thunk_in_F_fIi(float a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6159,7 +6159,7 @@ double thunk_in_F_fII(float a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6168,7 +6168,7 @@ double thunk_in_F_fIf(float a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6177,7 +6177,7 @@ double thunk_in_F_fIF(float a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6185,7 +6185,7 @@ double thunk_in_F_ff(float a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6194,7 +6194,7 @@ double thunk_in_F_ffi(float a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6203,7 +6203,7 @@ double thunk_in_F_ffI(float a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6212,7 +6212,7 @@ double thunk_in_F_fff(float a0, float a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6221,7 +6221,7 @@ double thunk_in_F_ffF(float a0, float a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6229,7 +6229,7 @@ double thunk_in_F_fF(float a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6238,7 +6238,7 @@ double thunk_in_F_fFi(float a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6247,7 +6247,7 @@ double thunk_in_F_fFI(float a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6256,7 +6256,7 @@ double thunk_in_F_fFf(float a0, double a1, float a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6265,14 +6265,14 @@ double thunk_in_F_fFF(float a0, double a1, double a2) {
   m->stack[m->fp+0].value.f32 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
 double thunk_in_F_F(double a0) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6280,7 +6280,7 @@ double thunk_in_F_Fi(double a0, uint32_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6289,7 +6289,7 @@ double thunk_in_F_Fii(double a0, uint32_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6298,7 +6298,7 @@ double thunk_in_F_FiI(double a0, uint32_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6307,7 +6307,7 @@ double thunk_in_F_Fif(double a0, uint32_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6316,7 +6316,7 @@ double thunk_in_F_FiF(double a0, uint32_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6324,7 +6324,7 @@ double thunk_in_F_FI(double a0, uint64_t a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6333,7 +6333,7 @@ double thunk_in_F_FIi(double a0, uint64_t a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6342,7 +6342,7 @@ double thunk_in_F_FII(double a0, uint64_t a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6351,7 +6351,7 @@ double thunk_in_F_FIf(double a0, uint64_t a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6360,7 +6360,7 @@ double thunk_in_F_FIF(double a0, uint64_t a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.uint64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6368,7 +6368,7 @@ double thunk_in_F_Ff(double a0, float a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6377,7 +6377,7 @@ double thunk_in_F_Ffi(double a0, float a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6386,7 +6386,7 @@ double thunk_in_F_FfI(double a0, float a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6395,7 +6395,7 @@ double thunk_in_F_Fff(double a0, float a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6404,7 +6404,7 @@ double thunk_in_F_FfF(double a0, float a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f32 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6412,7 +6412,7 @@ double thunk_in_F_FF(double a0, double a1) {
   Module *m = _wa_current_module_;
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6421,7 +6421,7 @@ double thunk_in_F_FFi(double a0, double a1, uint32_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6430,7 +6430,7 @@ double thunk_in_F_FFI(double a0, double a1, uint64_t a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.uint64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6439,7 +6439,7 @@ double thunk_in_F_FFf(double a0, double a1, float a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f32 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
@@ -6448,7 +6448,7 @@ double thunk_in_F_FFF(double a0, double a1, double a2) {
   m->stack[m->fp+0].value.f64 = a0;
   m->stack[m->fp+1].value.f64 = a1;
   m->stack[m->fp+2].value.f64 = a2;
-  interpret(m);
+  interpret(m, -1);
   return m->stack[m->sp--].value.f64;
 }
 
